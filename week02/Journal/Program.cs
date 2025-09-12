@@ -10,14 +10,15 @@ class Program
 
         Console.WriteLine("Welcome to thew Journal Program:");
         
-        while (choice != 5)
+        while (choice != 6)
         {
             Console.WriteLine("Please select one of the following choices:");
             Console.WriteLine("1. Write");
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Load");
             Console.WriteLine("4. Save");
-            Console.WriteLine("5. Quit");
+            Console.WriteLine("5. Available Prompts");            
+            Console.WriteLine("6. Quit");
             Console.Write("What would you like to do? ");
 
             string input = Console.ReadLine();
@@ -52,6 +53,11 @@ class Program
                         break;
 
                     case 5:
+                        PromptGenerator allPrompts = new PromptGenerator();
+                        allPrompts.Display();
+                        break;
+
+                    case 6:
                         Console.WriteLine("\nExiting program. Goodbye!");
                         break;
 

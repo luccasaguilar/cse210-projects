@@ -9,7 +9,6 @@ public class Journal
     {
         _entries.Add(newEntry);
     }
-
     public void SaveFile(string filename)
     {
         using (StreamWriter outputFile = new StreamWriter(filename))
