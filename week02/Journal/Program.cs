@@ -32,7 +32,6 @@ class Program
                         string entryText = Console.ReadLine();
                         Entry newEntry = new Entry(DateTime.Now.ToShortDateString(), prompt, entryText);
                         journal.AddEntry(newEntry);
-
                         break;
 
                     case 2:
@@ -40,6 +39,7 @@ class Program
                         break;
 
                     case 3:
+                        journal = new Journal();
                         Console.WriteLine("What is the filename?");
                         string filenameLoad = Console.ReadLine();
                         journal.LoadFile(filenameLoad);
