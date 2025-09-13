@@ -2,7 +2,6 @@ using System;
 using System.IO;
 public class Journal
 {
-    public string _name;
     public List<Entry> _entries = new List<Entry>();
 
     public void AddEntry(Entry newEntry)
@@ -31,7 +30,7 @@ public class Journal
             string prompt = parts[1];
             string response = parts[2];
 
-            Entry newEntry = new Entry(DateTime.Now.ToShortDateString(), prompt, response);
+            Entry newEntry = new Entry(date, prompt, response);
             this.AddEntry(newEntry);
         }
     }
