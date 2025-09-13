@@ -1,6 +1,8 @@
 using System;
 using System.IO;
 
+// I added a new menu item to display all available prompts. I also made adjustments to the menu in case the user enters an invalid option.
+
 class Program
 {
     static void Main(string[] args)
@@ -9,7 +11,7 @@ class Program
         Journal journal = new Journal();
 
         Console.WriteLine("Welcome to thew Journal Program:");
-        
+
         while (choice != 6)
         {
             Console.WriteLine("Please select one of the following choices:");
@@ -17,7 +19,7 @@ class Program
             Console.WriteLine("2. Display");
             Console.WriteLine("3. Load");
             Console.WriteLine("4. Save");
-            Console.WriteLine("5. Available Prompts");            
+            Console.WriteLine("5. Available Prompts");
             Console.WriteLine("6. Quit");
             Console.Write("What would you like to do? ");
 
