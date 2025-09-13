@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 
+// Shows creativity and exceeds core requirements:
 // I added a new menu item to display all available prompts. I also made adjustments to the menu in case the user enters an invalid option.
 
 class Program
