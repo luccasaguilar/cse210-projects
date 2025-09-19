@@ -8,6 +8,7 @@ public class Word
     public Word(string text)
     {
         _text = text;
+        _isHidden = false;
     }
 
     public void Hide()
@@ -28,7 +29,7 @@ public class Word
     public string GetDisplayText()
     {
         if (!_isHidden)
-            return _text;    
+            return _text;
 
         string core = _text.TrimEnd('.', ',', ';', ':', '!', '?');
         string punct = _text.Substring(core.Length);

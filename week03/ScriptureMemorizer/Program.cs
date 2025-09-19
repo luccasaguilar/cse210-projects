@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
+
+// I created a list of scriptures and the program chooses one randomly each time it runs.
 
 class Program
 {
@@ -49,10 +50,9 @@ class Program
                 new Reference("Mosiah", 2, 41),
                 "Consider on the blessed and happy state of those that keep the commandments of God. " +
                 "For they are blessed in all things, both temporal and spiritual."
-            )            
+            )
         };
 
-        // Escolhe aleatoriamente um
         Random rng = new Random();
         int index = rng.Next(scriptures.Count);
         var scripture = scriptures[index];

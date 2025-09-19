@@ -19,7 +19,7 @@ public class Scripture
         }
     }
 
-public void HideRandomWords(int numberToHide)
+    public void HideRandomWords(int numberToHide)
     {
         for (int i = 0; i < numberToHide; i++)
         {
@@ -41,5 +41,5 @@ public void HideRandomWords(int numberToHide)
     public bool IsCompletelyHidden()
     {
         return _words.All(w => w.IsHidden());
-    }    
+    }
 }
