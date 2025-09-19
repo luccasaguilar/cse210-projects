@@ -53,8 +53,8 @@ class Program
             )
         };
 
-        Random rng = new Random();
-        int index = rng.Next(scriptures.Count);
+        Random random = new Random();
+        int index = random.Next(scriptures.Count);
         var scripture = scriptures[index];
 
         while (true)

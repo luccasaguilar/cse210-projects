@@ -6,7 +6,6 @@ public class Scripture
 {
     private Reference _reference;
     private List<Word> _words = new List<Word>();
-    private static readonly Random _rng = new Random();
 
     public Scripture(Reference reference, string text)
     {
@@ -28,8 +27,8 @@ public class Scripture
             {
                 return;
             }
-
-            int idx = _rng.Next(visible.Count);
+            Random random = new Random();
+            int idx = random.Next(visible.Count);
             visible[idx].Hide();
         }
     }
