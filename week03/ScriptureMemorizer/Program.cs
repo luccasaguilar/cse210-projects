@@ -27,17 +27,14 @@ class Program
                 new Reference("2 Nephi", 2, 25),
                 "Adam fell that men might be; and men are, that they might have joy."
             ),
-
             new Scripture(
                 new Reference("Mosiah", 18, 9),
                 "Stand as witnesses of God at all times and in all things, and in all places that ye may be in, even until death."
             ),
-
             new Scripture(
                 new Reference("Ether", 12, 27),
                 "My grace is sufficient for all men that humble themselves before me."
             ),
-
             new Scripture(
                 new Reference("Moroni", 10, 4, 5),
                 "When ye shall receive these things, I would exhort you that ye would ask God, the Eternal Father, " +
@@ -45,7 +42,6 @@ class Program
                 "with real intent, having faith in Christ, he will manifest the truth of it unto you, by the power of the Holy Ghost. " +
                 "And by the power of the Holy Ghost ye may know the truth of all things."
             ),
-
             new Scripture(
                 new Reference("Mosiah", 2, 41),
                 "Consider on the blessed and happy state of those that keep the commandments of God. " +
