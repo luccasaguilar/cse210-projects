@@ -1,5 +1,5 @@
 using System;
-// I added a new activity related to the Book of Mormon
+// I added a new activity related to the Book of Mormon that invites you to list insights, principles, people, and teachings from the Book of Mormon about a given theme. Ultimately, I share a scripture.
 class Program
 {
     static void Main(string[] args)
