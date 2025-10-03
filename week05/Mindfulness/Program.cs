@@ -1,5 +1,5 @@
 using System;
-
+// I added a new activity related to the Book of Mormon
 class Program
 {
     static void Main(string[] args)
@@ -11,7 +11,8 @@ class Program
             Console.WriteLine("1. Start Breathing Activity");
             Console.WriteLine("2. Start Reflection Activity");
             Console.WriteLine("3. Start Listing Activity");
-            Console.WriteLine("4. Quit");
+            Console.WriteLine("4. Start Book of Mormon Activity");
+            Console.WriteLine("5. Quit");
             Console.Write("Choose an option: ");
             string choice = Console.ReadLine();
 
@@ -31,6 +32,11 @@ class Program
                 a.Run();
             }
             else if (choice == "4")
+            {
+                var a = new BookOfMormonActivity();
+                a.Run();
+            }
+            else if (choice == "5")
             {
                 break;
             }
