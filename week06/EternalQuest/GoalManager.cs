@@ -56,7 +56,7 @@ public class GoalManager
 
     public void CreateGoal()
     {
-        Console.WriteLine("Goal type: 1) Simple  2) Eternal  3) Checklist");
+        Console.WriteLine("Goal type: 1) Simple  2) Eternal  3) Checklist  4) Negative");
         Console.Write("Which type of goal would you like to create? ");
         string t = Console.ReadLine()?.Trim();
 
@@ -83,6 +83,10 @@ public class GoalManager
             int bonus = ReadInt(100);
             _goals.Add(new ChecklistGoal(name, desc, points, target, bonus));
         }
+        else if (t == "4")
+        {
+            _goals.Add(new NegativeGoal(name, desc, points * -1));
+        }
         else
         {
             Console.WriteLine("Invalid type.");
@@ -108,8 +112,20 @@ public class GoalManager
 
         int gained = _goals[idx].RecordEvent();
         _score += gained;
-        Console.WriteLine($"Congratulations! You have earned {gained} points!");
-        Console.WriteLine($"You now have {_score} points.");
+
+        if (gained > 0)
+        {
+            Console.WriteLine($"Congratulations! You have earned {gained} points!");
+            Console.WriteLine($"You now have {_score} points.");
+        } else if (gained < 0)
+        {
+            Console.WriteLine($"Trust your potential. You can do better! You have lost {gained * -1} points!");
+            Console.WriteLine($"You now have {_score} points.");
+        } else
+        {
+            Console.WriteLine($"Goal already completed. Your score has not been changed.");
+            Console.WriteLine($"You have {_score} points.");
+        }
         Pause();
     }
 
